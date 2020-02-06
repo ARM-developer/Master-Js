@@ -8,19 +8,21 @@
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 
-    <!-- slider plugin -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <!-- Moment Js plugin-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
     <!-- Mis Scripts -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/js-about.js"></script>
 </head>
+
+<!-- ================= -->
+<!--        BODY        -->
+<!-- ================= -->
 <body>
     <div id="selector-theme">
         <div id="to-green"></div>
@@ -44,21 +46,35 @@
                 </ul>
             </nav>
         </header>
-        
-        <!-- Slider -->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/hojas.jpg" title="hojas"></div>
-                <div><img src="img/rojo.jpg" title="rojo"></div>
-                <div><img src="img/cielo.jpg" title="cielo"></div>
-            </div>
-        </div>
-        
+
         <!-- Contenido -->
         <section id="content">
-            <div id="posts">
-                <!-- cargar articulo desde Js -->
+
+            <div id="box">
+                <!-- cargar acordeon desde Js -->
+                <h2>Sobre mi...</h2>
+                <div id="acordeon">
+                    <h3>¿Quiénes somos?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mattis ante. Phasellus convallis pharetra sodales.  
+                        </p>
+                    </div>
+                    <h3>¿Qué hacemos?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mattis ante. Phasellus convallis pharetra sodales.  
+                        </p>
+                    </div>
+                    <h3>¿Cuál es nuestra meta?</h3>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mattis ante. Phasellus convallis pharetra sodales.  
+                        </p>
+                    </div>
+                </div>
             </div>
+            <!-- sidebar -->
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Quién soy?</span></h4>
@@ -96,6 +112,7 @@
 
     </section>
 
+<!-- footer -->
     <footer>
         Master JavaScript
         <a href="#" class="subir">Volver Al Inicio</a>
