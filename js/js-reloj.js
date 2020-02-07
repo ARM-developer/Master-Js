@@ -57,8 +57,12 @@ $(document).ready(function(){
             });
         }
     //==============
-    //    ACORDEON
+    //    reloj
     //==============
-        $('#acordeon').accordion();
         
+        setInterval(function(){
+                var var_reloj = moment().format("hh:mm:ss");
+                $("#reloj").html(var_reloj);    
+        },1000);
+         
     });

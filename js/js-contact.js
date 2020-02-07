@@ -57,8 +57,16 @@ $(document).ready(function(){
             });
         }
     //==============
-    //    ACORDEON
+    //  formulario
     //==============
-        $('#acordeon').accordion();
         
+        $("form input[name='date']").datepicker({
+            dateFormat: "dd-mm-yy"
+        });
+
+        $.validate({
+            lang: 'es'
+        });
+        
+         
     });

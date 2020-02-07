@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- ================= -->
+<!--        HEAD        -->
+<!-- ================= -->  
 <head>
     <meta charset="UTF-8">
     <title>Primer Proyecto JavaScript</title>
@@ -8,16 +11,19 @@
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
 
     <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!-- jQuery UI -->
-    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
-    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
-    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
-    <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+     <!-- jQuery UI -->
+     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+     <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Form validator js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
     <!-- Mis Scripts -->
-    <script type="text/javascript" src="js/js-about.js"></script>
+    <script type="text/javascript" src="js/js-contact.js"></script>
 </head>
 
 <!-- ================= -->
@@ -51,28 +57,32 @@
         <section id="content">
 
             <div id="box">
-                <!-- cargar acordeon desde Js -->
-                <h2>Sobre mi...</h2>
-                <div id="acordeon">
-                    <h3>¿Quiénes somos?</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mattis ante. Phasellus convallis pharetra sodales.  
-                        </p>
-                    </div>
-                    <h3>¿Qué hacemos?</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mattis ante. Phasellus convallis pharetra sodales.  
-                        </p>
-                    </div>
-                    <h3>¿Cuál es nuestra meta?</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in mattis ante. Phasellus convallis pharetra sodales.  
-                        </p>
-                    </div>
-                </div>
+                <!-- cargar formulario y validacion desde Js -->
+                <h2>Contacto</h2>
+                <form accept="" method="POST" id="form_contact">
+                    <label for="name">Nombre: </label>
+                    <input type="text" name="name" data-validation="alphanumeric" />
+
+                    <label for="surname">Apellidos: </label>
+                    <input type="text" name="surname" data-validation="alphanumeric" />
+
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" data-validation="email" />
+
+                    <label for="sexo">sexo: </label>
+                    <select name="sexo" data-validation="required" >
+                        <option value="man">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiento: </label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy" />
+
+                    <label for="years">Edad: </label>
+                    <input type="number" name="years" data-validation="number"/>
+
+                    <input type="submit" value="enviar">
+                </form>
             </div>
             <!-- sidebar -->
             <aside id="sidebar">
